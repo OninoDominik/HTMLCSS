@@ -1,0 +1,67 @@
+.news:hover {
+    background-size: 115%;
+}
+.news{
+float: right;  border:1px solid white; height:300px; max-height: 300px;
+background-image: url(HBCK.jpg);
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center,center;
+}
+#imgHBCKLogo{
+    height: 60px;
+}
+
+.navbar-nav > li > .dropdown-menu { 
+    background-color: #1C1A1B;
+    color: yellow;
+}
+
+.part1{background-image: url("part1.jpg");}
+.part2{background-image: url("part2.jpg");}
+.part3{background-image: url("part3.jpg");}
+.part4{background-image: url("part4.jpg");}
+.part5{background-image: url("part5.jpg");}
+.part6{background-image: url("part6.jpg");}
+.part7{background-image: url("part7.jpg");}
+.part8{background-image: url("part8.jpg");}
+.part9{background-image: url("part9.jpg");}
+.part10{background-image: url("part10.jpg");}
+.part11{background-image: url("part11.jpg");}
+.part12{background-image: url("part12.jpg");}
+
+.prd{
+	width:260px;
+	height:200px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 110%;
+	position:relative;
+	transition: all 0.3s ease-in-out;
+	overflow:hidden;
+	cursor:pointer;
+	margin-top:2px;
+}
+
+.prd:hover{
+	background-size:100%;
+	transition: all 0.3s ease-in-out;
+}
+
+.banner{
+	background: rgba(255, 255, 255, 0.9);
+	position:absolute;
+	bottom:-40px;
+	left:0px;
+	width:100%;
+	text-transform: uppercase;
+	color:#fa8746;
+	font-weight:bold;
+	padding:10px;
+	transition: all 0.3s ease-in-out;
+}
+
+.prd:hover .banner{
+	bottom:0px;
+	transition: all 0.3s ease-in-out;
+} 

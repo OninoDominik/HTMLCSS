@@ -1,0 +1,60 @@
+div{
+	margin:5px;
+}
+.transition{
+	width: 200px;
+	height:200px;
+	background-color: #FC7307;
+	transition-delay: 0.8s;/*delay avant debut de l'anim*/
+	transition-duration: 5s; /*temps de l'anim*/
+	transition-timing-function: ease-in-out; /*courbe de la transition ease doucement en debut et fin de l'anim*/
+	transform: translate(0px,0px);
+}
+.transition:hover{
+	border-radius: 100px;
+	transition-duration: 5s;
+	transition-delay: 0.8s;
+	transition-timing-function: ease-in-out;
+	transform: translate(800px,0px);/*translation*/
+
+}
+.transform{
+	width: 200px;
+	height:200px;
+	background-color: #98CA32;
+	/*transform:translate(-100px, 50px);*/ /*translation*/
+	/*transform:scale(0.5,1);*/ /*redimensionner*/
+	transform:rotate(45deg);
+	/*transform-origin: top left;*/ /*definir le centre de la transfor*/
+	/*transform:skew(10deg);*/ /*sciseler*/
+
+}
+.animation{
+	width: 200px;
+	height:200px;
+	background-color: #5A18C9;
+	animation-name: anim1; /*nom de l'animation qui sera effectué*/
+	animation-duration: 5s;/*temps total de l'animation*/
+	animation-iteration-count: infinite;  /*va jouer l'animation x fois , x = 1 OU ... OU infini*/
+	animation-direction: alternate ; /*va jouer l'animation de 0 a 100% puis de 100 a 0% avec le alternate*/
+	animation-fill-mode: forwards;  /* va finir la derniere iteration de l'animation a 100%(forwards) pas revenir a l'etat 0% (normal)*/
+
+}
+
+@keyframes anim1{
+	0% /*debut anim*/
+	{
+		transform:translate(0px,0px);
+		background-color: #F7E0D4;
+	}
+	50% /*milieu de l'anim*/
+	{
+		transform:translate(200px,0px);
+		background-color: #342B09;
+	}
+	100% /*fin de l'anim*/
+	{
+		transform:translate(200px,200px);
+		background-color: #FB9902;
+	}
+}
