@@ -12,38 +12,48 @@ $req2 = "SELECT COUNT(*) AS total FROM cochon";
 $results2 = $obj_database->Query($req2);
 $total=$results2[0]['total'];
 echo "test:".$total;
-$messagesParPage=5; //Nous allons afficher 5 messages par page.
+if(isset($_POST['nbrparpage']))
+	{
+$messagesParPage=$_POST['nbrparpage']; 
+	}
+	else{
+		if (isset($_GET['nbrparpage']))
+		{
+			$messagesParPage=$_GET['nbrparpage'];
+		}else
+		{
+			$messagesParPage=5;
+		}
+		
+	}
 $req2 = "SELECT COUNT(*) AS total FROM cochon";
 $results2 = $obj_database->Query($req2);
 $total=$results2[0]['total'];
-//Une connexion SQL doit être ouverte avant cette ligne...
- 
-//Nous allons maintenant compter le nombre de pages.
+
 $nombreDePages=ceil($total/$messagesParPage);
  
-if(isset($_GET['LaPage'])) // Si la variable $_GET['page'] existe...
+if(isset($_GET['LaPage'])) 
 {
      $pageActuelle=intval($_GET['LaPage']);
  
-     if($pageActuelle>$nombreDePages) // Si la valeur de $pageActuelle (le numéro de la page) est plus grande que $nombreDePages...
+     if($pageActuelle>$nombreDePages) 
      {
           $pageActuelle=$nombreDePages;
      }
 }
-else // Sinon
+else 
 {
-     $pageActuelle=1; // La page actuelle est la n°1    
+     $pageActuelle=1;  
 }
  
-$premiereEntree=($pageActuelle-1)*$messagesParPage; // On calcul la première entrée à lire
+$premiereEntree=($pageActuelle-1)*$messagesParPage; 
  
-// La requête sql pour récupérer les messages de la page actuelle.
 $queryyy= "SELECT * FROM cochon ORDER BY id_cochons DESC LIMIT ".$premiereEntree.", ".$messagesParPage."";
 echo $queryyy;
 $retour_messages=$obj_database->Query($queryyy);
 $results = $obj_database->Query($queryyy);
  
- 
+echo '<form action="" method="POST"><input type="number" class ="form-control" style="min-width: 400px;min-height: auto" name="nbrparpage" value='.$messagesParPage.'; ?><br/></form>';
 echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
 for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
 {
@@ -54,7 +64,7 @@ for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
      }	
      else //Sinon...
      {
-          echo ' <a href="index.php?page=liste_cochon&LaPage='.$i.'">'.$i.'</a> ';
+          echo ' <a href="index.php?page=liste_cochon&LaPage='.$i.'&nbrparpage='.$messagesParPage.'">'.$i.'</a> ';
      }
 }
 echo '</p>';
