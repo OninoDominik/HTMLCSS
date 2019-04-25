@@ -1,0 +1,26 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+#------------------------------------------------------------
+# Database: projetCochon
+#------------------------------------------------------------
+
+CREATE DATABASE IF NOT EXISTS `projetCochon`;
+use projetCochon;
+
+
+#------------------------------------------------------------
+# Table: Cochon
+#------------------------------------------------------------
+
+CREATE TABLE Cochon(
+        id_cochons      Int  Auto_increment  NOT NULL ,
+        Nom             Varchar (50) NOT NULL ,
+        Poids           Int NOT NULL ,
+        Heure_naissance Datetime NOT NULL ,
+        Heure_mort      Datetime ,
+        Url_img         Varchar (200) NOT NULL ,
+        Sexe            Boolean NOT NULL
+	,CONSTRAINT Cochon_PK PRIMARY KEY (id_cochons)
+)ENGINE=InnoDB;

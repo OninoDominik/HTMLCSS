@@ -1,4 +1,30 @@
 <!DOCTYPE html>
+
+<?php 
+	include ("connexionPDO.php");
+
+if(isset($_GET['page']))
+	if ($_GET['page']=='logged')
+	{
+{
+    if (userExists($_POST['username'],$conn)==True) {
+            if (checkPassword($_POST['username'], $_POST['password'],$conn)==True) {
+                if (checkGroupe($_POST['username'],$conn)==1) {
+                	$cookie_name = "hbck";
+                	$cookie_value = "1";
+                    setcookie($cookie_name, $cookie_value,time()+3600,"/");
+                }elseif (checkGroupe($_POST['username'],$conn)==2) {
+                	$cookie_name = "hbck";
+                	$cookie_value = "2";
+                   setcookie($cookie_name, $cookie_value, time()+3600,"/");
+                }
+            }
+        }
+    }
+}
+
+       ?>         
+
 <?php 
 
 if(!isset($_GET['page']))
@@ -20,6 +46,11 @@ case "partenaire":
 $title = "Page des partenaire du HBCK";
 break;
 
+case "equipe":
+$title = "Page des Equipes du HBCK";
+break;
+
+
 case "contact":
 $title = "Informations de contact";
 break;
@@ -30,11 +61,11 @@ $title = "HBCK";
 }
 
 ?>
-<html>
-<meta charset="utf-8">
+<html lang="fr">
 
   <head>
-    <meta charset="utf-8">
+
+    <meta Content-type:"text/html" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
@@ -46,11 +77,11 @@ $title = "HBCK";
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <link href="style.css" rel="stylesheet" media="all" type="text/css">
+  <link href="style.css"  rel="stylesheet" media="all" type="text/css">
     <!-- Custom styles for this template -->
   </head>
 
-<body style='background-color: #1C1A1B'>
+<body style='background-color: white'>
 	
 	<header id="header2" >
 		<?php
@@ -63,7 +94,6 @@ $title = "HBCK";
 		<!-- affichage de la variable en parametre-->
 		<!-- le paramettre est stocke dans un tableau $_GET-->
 		<!-- si le tableau est vide message d'erreur -->
-		valeur du parametre :<?php echo $_GET['page']?>
 		<br/> <br/>
 
 		<?php 

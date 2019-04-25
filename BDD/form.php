@@ -20,9 +20,11 @@ else
 	$results= $db->query($req);
 	$licencie= mysqli_fetch_array($results, MYSQLI_BOTH);
 }
-
+if (isset($_POST['envoyer']))
+{ 
+ move_uploaded_file($_FILES['photoss']['tmp_name'],"photo222.jpg"); //photo.jpg =nomage et destination
+}
 ?>
-
 
 <form action="" method="POST">
 	Prénom: <input type="text" name='prenom' value='<?php if ($_GET['id']!='new') echo $licencie['prenom']; ?>'><br/>
@@ -48,5 +50,10 @@ else
 </option>
 </select><br/>
 <button type="submit" name="valider">Enregistrer</button>
+</form>
+
+<form action="" method="POST" enctype="multipart/form-data">
+	Photos: <input type="file" name="photoss">
+	<button type="submit" name="envoyer">Enregistrer</button>
 </form>
 <a href="liste.php">Retour</a>
