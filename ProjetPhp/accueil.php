@@ -11,7 +11,7 @@
 
 
 	<h2 align="center">2.Cochonou comme </h2>
-	<img src="pig1.jpg" id="pig1">
+	<img src="./ressource/image/pig1.jpg" id="pig1">
 	<h3>consectetur adipiscing elit. Proin.</h3><br/>
 
 	<P ALIGN=LEFT><b> consectetur adipiscing elit. Proin</b> <br/>
@@ -35,7 +35,7 @@
 		<br>
 
 		<h2 align="center">3.Cochonou comme on l'aime </h2><br>
-		<img src="pig2.jpg" id="pig2">
+		<img src="./ressource/image/pig2.jpg" id="pig2">
 		<p><b> Nam congue et: </b>
 			Nullam sagittis nunc ac posuere pharetra. Phasellus vulputate libero quis ipsum fringilla, eget fermentum lacus lobortis.<br/> Suspendisse semper eros a diam pharetra dapibus. Aliquam at porta nunc. Sed sed tempus orci, a tincidunt augue. Nam eget odio finibus, rhoncus lectus nec, rutrum erat. Proin at nulla odio. Aenean sit amet rhoncus ipsum<br/> 
 
@@ -47,20 +47,21 @@
 		<h2 align="center">4.Cochonou comme on l'aime chez nous</h2><br>
 		<P ALIGN=LEFT> 
 			<b>cursus </b><br><br>
-			Integer in sollicitudin neque. Etiam nec lorem justo.
-			<b>efficitur nibh</b><br><br>
+			Integer in sollicitudin neque. Etiam nec lorem justo.<br>
+			<b><br>efficitur nibh</b><br><br>
 			Vivamus id leo sit amet mauris maximus tincidunt. Nunc ornare id mi et dignissim. Etiam lacinia, dui et sagittis fringilla, sem felis accumsan orci, vel condimentum metus ante a erat.<br>
-			<b> Nam congue et</b><br><br>
+			<b><br> Nam congue et</b><br><br>
 			Proin vestibulum rhoncus nibh, nec egestas nulla viverra id. Nunc ut ligula risus. Vestibulum ultricies aliquam nunc, nec mollis diam interdum et.<br>
-			<b>Duis pulvinar pharetra pharetra</b><br><br>
+			<b><br>Duis pulvinar pharetra pharetra</b><br><br>
 			Praesent eu consequat mi. .<br>
-			<b>Ut semper augue scelerisque</b><br><br>
+			<b><br>Ut semper augue scelerisque</b><br><br>
 			 Nunc ut ligula risus. Vestibulum ultricies aliquam nunc, nec mollis diam interdum et. Vivamus magna lorem, laoreet in lacus ac, sollicitudin tempor magna.<br>
-			<b>sollicitudin tempor magna</b><br><br>
+			<b><br>sollicitudin tempor magna</b><br><br>
 			Praesent eu consequat mi. Quisque lacinia ligula a erat rhoncus, ac condimentum nunc tincidunt. Etiam ut molestie tellus, in lobortis est<br>
-			<b>Sed odio odio, iaculis id iaculis vel, porttitor porta enim</b><br><br>
+			<b><br>Sed odio odio, iaculis id iaculis vel, porttitor porta enim</b><br><br>
 			Mauris vehicula maximus eros, quis tristique metus auctor aliquet. Aliquam nec orci at libero vestibulum euismod. Ut semper augue scelerisque, pretium lacus a, lobortis enim<br>
+			<br><br>
 
 		</p>
-
+<br>
 		</DIV>

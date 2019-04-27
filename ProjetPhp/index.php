@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <?php 
 	include ("connexionBDD.php");
 
@@ -11,26 +9,30 @@
 
 if(!isset($_GET['page']))
 {
-	$_GET['page']="liste_cochon";
+	$_GET['page']="accueil";
 }
 else if ($_GET['page'] == "")
 {
-	$_GET['page']="liste_cochon";
+	$_GET['page']="accueil";
 }
 
 switch($_GET['page'])
 {
 case "liste_cochon":
-$title = "Liste cochon";
+$title = "Mes cochons";
 break;
 
 case "cochon":
 $title = "Page d'un cochon";
 break;
 
+case "adresse":
+$title = "Nous trouver !";
+break;
+
 
 default:
-$title = "Tp";
+$title = "Porcherie";
 
 }
 
@@ -53,7 +55,7 @@ $title = "Tp";
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <link href="style.css"  rel="stylesheet" media="all" type="text/css">
   <!-- choose a theme file -->
-<link rel="stylesheet" href="./tablesorter-master/css/theme.ice.css">
+<link rel="stylesheet" href="./tablesorter-master/css/theme.blue.css">
 <!-- load jQuery and tablesorter scripts -->
 <script type="text/javascript" src="./tablesorter-master/docs/js/jquery-latest.min.js"></script>
 <script type="text/javascript" src="./tablesorter-master/js/jquery.tablesorter.js"></script>
